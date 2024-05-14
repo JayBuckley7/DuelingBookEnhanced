@@ -72,7 +72,7 @@ function handleDeckOptions(deckType: string, action: string) {
   }
 }
 
-window.onload = async function () {
+window.onload = async function() {
   view = document.getElementById('view') as HTMLElement;
   closeViewButton = view?.getElementsByClassName('exit_btn')[0] as HTMLElement;
   deck = document.getElementById('deck_hidden') as HTMLElement;
@@ -196,6 +196,7 @@ window.onload = async function () {
     if (message.type === 'HOTKEYS_CHANGED') {
       console.log('Received updated hotkeys:', message.payload);
       hotkeyHashMap = message.payload; // update the hotkeys map.
+      return true;
     }
   });
 
