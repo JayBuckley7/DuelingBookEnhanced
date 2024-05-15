@@ -190,20 +190,20 @@ export const Options = () => {
         </nav>
       </div>
       <div className="flex-grow p-4 pt-0 rounded-lg">
-      <JoinDiscord />
-      <main className="relative">
-        {renderMainContent()}
-        {isSavedVisible && (
-          <div className="flex justify-center">
-            <div className="saved-settings-message bg-green-500 text-white px-4 py-2 rounded-md absolute top-0 animate-slide-down opacity-0 text-lg transition-transform duration-500">
-              Settings Saved!
+        <JoinDiscord />
+        <main className="relative">
+          {renderMainContent()}
+          {isSavedVisible && (
+            <div className="flex justify-center">
+              <div className="saved-settings-message bg-green-500 text-white px-4 py-2 rounded-md absolute top-0 animate-slide-down opacity-0 text-lg transition-transform duration-500">
+                Settings Saved!
+              </div>
             </div>
-          </div>
-        )}
-      </main>
-      <Footer />
+          )}
+        </main>
+        <Footer />
+      </div>
     </div>
-  </div>
   );
 };
 

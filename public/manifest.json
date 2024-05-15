@@ -4,11 +4,11 @@
   "description": "A Chrome extension to bring QOL additions to DuelingBook.com",
   "version": "0.2.2",
   "options_ui": {
-    "page": "FullOptions.html",
+    "page": "fullOptions.html",
     "open_in_tab": true
   },
   "action": {
-    "default_popup": "Popup.html"
+    "default_popup": "popup.html"
   },
   "icons": {
     "32": "dbe_logo_32.png",
