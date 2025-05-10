@@ -37,6 +37,6 @@
     "scripting"
   ],
   "host_permissions": [
-    "http://www.DuelingBook.com/html5"
+    "https://www.duelingbook.com/*"
   ]
 }

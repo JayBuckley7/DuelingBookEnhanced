@@ -23,7 +23,7 @@ export const getOptionsFromStorage = (callback: (options: OptionsTypes) => void)
 export const saveOptionsToStorage = (options: OptionsTypes) => {
   chrome.storage.sync.set({ options }, () => {
     // notify content scripts that settings have changed
-    chrome.tabs.query({}, (tabs) => {
+    chrome.tabs.query({url: "*://www.duelingbook.com/*"}, (tabs) => {
       for (const tab of tabs) {
         if (tab.id !== undefined) {
           chrome.tabs.sendMessage(tab.id, {
