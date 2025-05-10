@@ -4,6 +4,7 @@ export interface OptionsTypes {
   skipIntro: boolean;
   autoConnect: boolean;
   isNightMode: boolean;
+  showRewindButton?: boolean;
 }
 
 export const getOptionsFromStorage = (callback: (options: OptionsTypes) => void) => {
@@ -13,6 +14,7 @@ export const getOptionsFromStorage = (callback: (options: OptionsTypes) => void)
       skipIntro: false,
       autoConnect: false,
       isNightMode: false,
+      showRewindButton: false,
     };
     callback(options);
   });
