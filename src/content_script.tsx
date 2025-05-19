@@ -130,7 +130,7 @@ window.onload = async function() {
   LPInput = document.getElementById('life_txt') as HTMLElement
   subButton = document.getElementById('plus_btn') as HTMLElement;
   addButton = document.getElementById('minus_btn') as HTMLElement;
-  const isReplay = window.location.href.includes("/replay?id=");
+  const isReplay = window.location.href.includes("/replay");
 
   let options: OptionsTypes;
 
@@ -245,7 +245,7 @@ window.onload = async function() {
           if (!newOptions.isNightMode) removeDarkMode();
         }
 
-        const isReplay = window.location.href.includes("/replay?id=");
+        const isReplay = window.location.href.includes("/replay");
         if (isReplay && newOptions?.showRewindButton) {
           observeDuelElement();
         }
