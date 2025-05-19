@@ -17,12 +17,18 @@ chrome.runtime.onMessage.addListener((message, sender) => {
       target: { tabId: sender.tab.id, allFrames: true },
       world: "MAIN",
       func: () => {
-        const fn = (window as any).stepBackwardE;
+        const fn =
+          (window as any).stepBackwardE ||
+          (window as any)._stepBackwardE;
         if (typeof fn === "function") {
-          console.debug("DuelingBookEnhanced: calling stepBackwardE from MAIN world");
+          console.debug(
+            "DuelingBookEnhanced: calling stepBackwardE from MAIN world"
+          );
           fn();
         } else {
-          console.warn("DuelingBookEnhanced: stepBackwardE not found in this frame's MAIN world");
+          console.warn(
+            "DuelingBookEnhanced: stepBackwardE not found in this frame's MAIN world"
+          );
         }
       }
     } as any);
